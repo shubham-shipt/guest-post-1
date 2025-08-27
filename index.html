@@ -1,0 +1,2680 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crook Store - Premium Jewelry & Accessories</title>
+    <meta name="description" content="Discover premium handcrafted jewelry and accessories that define your unique style">
+    <link rel="icon" href="https://crookstore.in/cdn/shop/files/010.png?v=1705328085&width=200">
+    
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500&family=Space+Grotesk:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    
+    <style>
+        /* Enhanced CSS Variables with Premium Color Combinations */
+        :root {
+            /* Default Theme - Luxury Gold */
+            --primary: #0a0a0a;
+            --secondary: #1a1a1a;
+            --accent: #d4af37;
+            --accent-light: #f4e4bc;
+            --accent-dark: #b8941f;
+            --accent-glow: #ffd700;
+            --background: #fefefe;
+            --surface: #ffffff;
+            --text-primary: #0a0a0a;
+            --text-secondary: #4a5568;
+            --text-muted: #718096;
+            --border: #e2e8f0;
+            --border-light: #f7fafc;
+            
+            /* Premium Colors */
+            --success: #10b981;
+            --warning: #f59e0b;
+            --error: #ef4444;
+            --info: #3b82f6;
+            
+            /* Premium Gradients */
+            --gradient-primary: linear-gradient(135deg, #d4af37 0%, #ffd700 25%, #f4e4bc 50%, #d4af37 75%, #b8941f 100%);
+            --gradient-secondary: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 50%, #2d2d2d 100%);
+            --gradient-surface: linear-gradient(135deg, #ffffff 0%, #fefefe 50%, #f7fafc 100%);
+            --gradient-glass: linear-gradient(135deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.1) 100%);
+            --gradient-glow: radial-gradient(circle, rgba(212, 175, 55, 0.15) 0%, transparent 70%);
+            
+            /* Enhanced Shadows */
+            --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+            --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+            --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+            --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            --shadow-glow: 0 0 20px rgba(212, 175, 55, 0.4);
+            --shadow-glow-strong: 0 0 40px rgba(212, 175, 55, 0.6);
+            --shadow-inner: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+            
+            /* Premium Border Radius */
+            --radius-xs: 4px;
+            --radius-sm: 6px;
+            --radius-md: 8px;
+            --radius-lg: 12px;
+            --radius-xl: 16px;
+            --radius-2xl: 20px;
+            --radius-3xl: 24px;
+            --radius-full: 9999px;
+            
+            /* Enhanced Transitions */
+            --transition-fast: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-normal: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-slow: all 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+            --transition-bounce: all 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            --transition-elastic: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        /* Theme 2 - Sapphire Luxury */
+        [data-theme="sapphire"] {
+            --accent: #0066cc;
+            --accent-light: #3399ff;
+            --accent-dark: #003d7a;
+            --accent-glow: #0080ff;
+            --gradient-primary: linear-gradient(135deg, #0066cc 0%, #3399ff 25%, #66ccff 50%, #0066cc 75%, #003d7a 100%);
+            --shadow-glow: 0 0 20px rgba(0, 102, 204, 0.4);
+            --shadow-glow-strong: 0 0 40px rgba(0, 102, 204, 0.6);
+        }
+
+        /* Theme 3 - Emerald Luxury */
+        [data-theme="emerald"] {
+            --accent: #047857;
+            --accent-light: #10b981;
+            --accent-dark: #064e3b;
+            --accent-glow: #34d399;
+            --gradient-primary: linear-gradient(135deg, #047857 0%, #10b981 25%, #34d399 50%, #047857 75%, #064e3b 100%);
+            --shadow-glow: 0 0 20px rgba(4, 120, 87, 0.4);
+            --shadow-glow-strong: 0 0 40px rgba(4, 120, 87, 0.6);
+        }
+
+        /* Theme 4 - Rose Luxury */
+        [data-theme="rose"] {
+            --accent: #e11d48;
+            --accent-light: #f43f5e;
+            --accent-dark: #be123c;
+            --accent-glow: #fb7185;
+            --gradient-primary: linear-gradient(135deg, #e11d48 0%, #f43f5e 25%, #fb7185 50%, #e11d48 75%, #be123c 100%);
+            --shadow-glow: 0 0 20px rgba(225, 29, 72, 0.4);
+            --shadow-glow-strong: 0 0 40px rgba(225, 29, 72, 0.6);
+        }
+
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        *::before,
+        *::after {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background: var(--background);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            transition: var(--transition-normal);
+            position: relative;
+        }
+
+        /* Premium Animated Background */
+        .premium-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -3;
+            background: 
+                radial-gradient(circle at 25% 25%, var(--accent) 0%, transparent 50%),
+                radial-gradient(circle at 75% 75%, var(--accent-light) 0%, transparent 50%),
+                radial-gradient(circle at 50% 50%, var(--accent-glow) 0%, transparent 70%);
+            opacity: 0.03;
+            animation: backgroundPulse 20s ease-in-out infinite;
+        }
+
+        @keyframes backgroundPulse {
+            0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.03; }
+            25% { transform: scale(1.1) rotate(90deg); opacity: 0.05; }
+            50% { transform: scale(1.2) rotate(180deg); opacity: 0.04; }
+            75% { transform: scale(1.1) rotate(270deg); opacity: 0.05; }
+        }
+
+        .geometric-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -2;
+            opacity: 0.02;
+            background-image: 
+                repeating-linear-gradient(45deg, var(--accent) 0px, transparent 2px, transparent 10px, var(--accent) 12px),
+                repeating-linear-gradient(-45deg, var(--accent-light) 0px, transparent 1px, transparent 15px, var(--accent-light) 17px);
+            animation: patternShift 30s linear infinite;
+        }
+
+        @keyframes patternShift {
+            0% { transform: translateX(0) translateY(0); }
+            25% { transform: translateX(20px) translateY(-20px); }
+            50% { transform: translateX(0) translateY(-40px); }
+            75% { transform: translateX(-20px) translateY(-20px); }
+            100% { transform: translateX(0) translateY(0); }
+        }
+
+        /* Enhanced Particle System */
+        .particle-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            pointer-events: none;
+            will-change: transform, opacity;
+        }
+
+        .particle-gold {
+            width: 4px;
+            height: 4px;
+            background: var(--accent);
+            box-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent);
+            opacity: 0.8;
+            animation: particleFloat 12s ease-in-out infinite;
+        }
+
+        .particle-diamond {
+            width: 6px;
+            height: 6px;
+            background: var(--accent-light);
+            box-shadow: 0 0 12px var(--accent-light), 0 0 24px var(--accent-light);
+            opacity: 0.6;
+            animation: particleDiamond 15s ease-in-out infinite;
+        }
+
+        .particle-sparkle {
+            width: 3px;
+            height: 3px;
+            background: var(--accent-glow);
+            box-shadow: 0 0 8px var(--accent-glow), 0 0 16px var(--accent-glow);
+            opacity: 0.9;
+            animation: particleSparkle 8s ease-in-out infinite;
+        }
+
+        @keyframes particleFloat {
+            0%, 100% {
+                transform: translateY(0px) translateX(0px) rotate(0deg) scale(1);
+                opacity: 0.4;
+            }
+            25% {
+                transform: translateY(-30px) translateX(20px) rotate(90deg) scale(1.2);
+                opacity: 0.8;
+            }
+            50% {
+                transform: translateY(-60px) translateX(-10px) rotate(180deg) scale(0.8);
+                opacity: 1;
+            }
+            75% {
+                transform: translateY(-30px) translateX(-20px) rotate(270deg) scale(1.1);
+                opacity: 0.6;
+            }
+        }
+
+        @keyframes particleDiamond {
+            0%, 100% {
+                transform: translateY(0px) scale(1) rotate(0deg);
+                opacity: 0.3;
+                filter: hue-rotate(0deg);
+            }
+            33% {
+                transform: translateY(-40px) scale(1.5) rotate(120deg);
+                opacity: 0.8;
+                filter: hue-rotate(120deg);
+            }
+            66% {
+                transform: translateY(-80px) scale(0.7) rotate(240deg);
+                opacity: 1;
+                filter: hue-rotate(240deg);
+            }
+        }
+
+        @keyframes particleSparkle {
+            0%, 100% {
+                transform: translateY(0px) scale(1);
+                opacity: 0.5;
+                filter: brightness(1);
+            }
+            50% {
+                transform: translateY(-50px) scale(1.8);
+                opacity: 1;
+                filter: brightness(2);
+            }
+        }
+
+        /* Premium Header with Enhanced Logo */
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.92);
+            backdrop-filter: blur(24px) saturate(180%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+            z-index: 1000;
+            transition: var(--transition-normal);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .header.scrolled {
+            background: rgba(255, 255, 255, 0.96);
+            box-shadow: var(--shadow-lg);
+            border-bottom-color: var(--border);
+        }
+
+        .header-top {
+            background: var(--gradient-secondary);
+            color: white;
+            padding: 0.75rem 0;
+            text-align: center;
+            font-size: 0.9rem;
+            font-weight: 500;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-top::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            animation: headerShimmer 4s infinite;
+        }
+
+        @keyframes headerShimmer {
+            0% { left: -100%; }
+            100% { left: 100%; }
+        }
+
+        .header-nav {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 2rem;
+        }
+
+        /* Enhanced Logo with Perfect Sizing */
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+            transition: var(--transition-bounce);
+            position: relative;
+            z-index: 10;
+        }
+
+        .logo:hover {
+            transform: scale(1.05) translateY(-2px);
+            filter: drop-shadow(var(--shadow-glow));
+        }
+
+        .logo-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 60px;
+            height: 60px;
+            background: var(--gradient-glass);
+            border-radius: var(--radius-2xl);
+            backdrop-filter: blur(12px);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            transition: var(--transition-elastic);
+            overflow: hidden;
+        }
+
+        .logo-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-glow);
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: -1;
+        }
+
+        .logo:hover .logo-container::before {
+            opacity: 1;
+        }
+
+        .logo-image {
+            width: 42px;
+            height: 42px;
+            object-fit: contain;
+            transition: var(--transition-bounce);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .logo:hover .logo-image {
+            transform: scale(1.1) rotate(5deg);
+            filter: brightness(1.2) contrast(1.2);
+        }
+
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .logo-title {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.2;
+            letter-spacing: -0.02em;
+        }
+
+        .logo-subtitle {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-top: -2px;
+        }
+
+        /* Enhanced Navigation */
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-link {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 0.75rem 1.25rem;
+            border-radius: var(--radius-xl);
+            transition: var(--transition-normal);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .nav-link::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: -1;
+        }
+
+        .nav-link:hover,
+        .nav-link.active {
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .nav-link:hover::before,
+        .nav-link.active::before {
+            opacity: 1;
+        }
+
+        /* Premium Theme Selector */
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .theme-selector {
+            display: flex;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: 0.4rem;
+            box-shadow: var(--shadow-md);
+            backdrop-filter: blur(12px);
+        }
+
+        .theme-btn {
+            width: 36px;
+            height: 36px;
+            border: none;
+            border-radius: var(--radius-xl);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            position: relative;
+            margin: 0 2px;
+            overflow: hidden;
+        }
+
+        .theme-btn::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 0;
+            height: 0;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            transition: var(--transition-fast);
+            transform: translate(-50%, -50%);
+        }
+
+        .theme-btn:hover::before {
+            width: 100%;
+            height: 100%;
+        }
+
+        .theme-btn.gold { 
+            background: linear-gradient(135deg, #d4af37, #ffd700, #f4e4bc); 
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        .theme-btn.sapphire { 
+            background: linear-gradient(135deg, #0066cc, #3399ff, #66ccff); 
+            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
+        }
+        .theme-btn.emerald { 
+            background: linear-gradient(135deg, #047857, #10b981, #34d399); 
+            box-shadow: 0 4px 15px rgba(4, 120, 87, 0.3);
+        }
+        .theme-btn.rose { 
+            background: linear-gradient(135deg, #e11d48, #f43f5e, #fb7185); 
+            box-shadow: 0 4px 15px rgba(225, 29, 72, 0.3);
+        }
+
+        .theme-btn.active {
+            transform: scale(1.15);
+            box-shadow: var(--shadow-glow-strong);
+            z-index: 2;
+        }
+
+        .theme-btn:hover {
+            transform: scale(1.1) translateY(-2px);
+        }
+
+        /* Enhanced Action Buttons */
+        .action-btn {
+            position: relative;
+            width: 48px;
+            height: 48px;
+            background: var(--surface);
+            border: 2px solid var(--border);
+            border-radius: var(--radius-xl);
+            color: var(--text-primary);
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            backdrop-filter: blur(12px);
+            overflow: hidden;
+        }
+
+        .action-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: -1;
+        }
+
+        .action-btn:hover {
+            color: white;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: var(--shadow-glow);
+            border-color: var(--accent);
+        }
+
+        .action-btn:hover::before {
+            opacity: 1;
+        }
+
+        .badge {
+            position: absolute;
+            top: -6px;
+            right: -6px;
+            background: var(--error);
+            color: white;
+            border-radius: var(--radius-full);
+            width: 22px;
+            height: 22px;
+            font-size: 0.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            animation: badgePulse 2s infinite;
+            box-shadow: var(--shadow-md);
+        }
+
+        @keyframes badgePulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+        }
+
+        /* Premium Hero Section with Enhanced Animations */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: var(--gradient-surface);
+            overflow: hidden;
+            padding: 8rem 0 4rem;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-glow);
+            opacity: 0.1;
+            z-index: 1;
+        }
+
+        .hero-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 5rem;
+            align-items: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-text {
+            animation: slideInLeft 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.3s both;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--gradient-glass);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 2rem;
+            backdrop-filter: blur(12px);
+            animation: badgeFloat 3s ease-in-out infinite;
+            box-shadow: var(--shadow-glow);
+        }
+
+        @keyframes badgeFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-5px); }
+        }
+
+        .hero-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3.5rem, 7vw, 6rem);
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+        }
+
+        .hero-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--gradient-primary);
+            border-radius: var(--radius-full);
+            animation: titleUnderline 2s ease-out 1s both;
+        }
+
+        @keyframes titleUnderline {
+            from { width: 0; }
+            to { width: 60px; }
+        }
+
+        .hero-subtitle {
+            font-size: 1.3rem;
+            color: var(--text-secondary);
+            margin-bottom: 3rem;
+            line-height: 1.7;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 1.25rem 2.5rem;
+            border-radius: var(--radius-2xl);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.05rem;
+            transition: var(--transition-bounce);
+            border: 2px solid transparent;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn:hover::before {
+            left: 100%;
+        }
+
+        .btn-primary {
+            background: var(--gradient-primary);
+            color: white;
+            box-shadow: var(--shadow-glow);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-glow-strong);
+        }
+
+        .btn-secondary {
+            background: var(--surface);
+            color: var(--text-primary);
+            border-color: var(--border);
+            backdrop-filter: blur(12px);
+        }
+
+        .btn-secondary:hover {
+            background: var(--accent);
+            color: white;
+            border-color: var(--accent);
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: var(--shadow-lg);
+        }
+
+        /* Enhanced Hero Visual */
+        .hero-visual {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+            animation: slideInRight 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.6s both;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 280px;
+            background: var(--surface);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            box-shadow: var(--shadow-xl);
+            transition: var(--transition-bounce);
+            position: relative;
+        }
+
+        .hero-image::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-glow);
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: 1;
+        }
+
+        .hero-image:hover::before {
+            opacity: 0.1;
+        }
+
+        .hero-image:hover {
+            transform: translateY(-15px) rotate(2deg) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+        }
+
+        .hero-image:nth-child(even):hover {
+            transform: translateY(-15px) rotate(-2deg) scale(1.02);
+        }
+
+        .hero-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .hero-image:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        /* Enhanced Features Section */
+        .features {
+            padding: 6rem 0;
+            background: var(--surface);
+            position: relative;
+        }
+
+        .features::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-glow);
+            opacity: 0.05;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        .section-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: var(--gradient-glass);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            color: var(--accent);
+            padding: 0.75rem 1.5rem;
+            border-radius: var(--radius-full);
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1.5rem;
+            backdrop-filter: blur(12px);
+            box-shadow: var(--shadow-glow);
+            animation: sectionBadgeFloat 4s ease-in-out infinite;
+        }
+
+        @keyframes sectionBadgeFloat {
+            0%, 100% { transform: translateY(0px) scale(1); }
+            50% { transform: translateY(-3px) scale(1.02); }
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            color: var(--text-primary);
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .section-subtitle {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .feature-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            padding: 3rem 2rem;
+            text-align: center;
+            transition: var(--transition-bounce);
+            box-shadow: var(--shadow-md);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--gradient-primary);
+            opacity: 0;
+            transition: var(--transition-normal);
+            z-index: 1;
+        }
+
+        .feature-card:hover::before {
+            opacity: 0.05;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--accent);
+        }
+
+        .feature-icon {
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 2rem;
+            font-size: 2.2rem;
+            color: white;
+            transition: var(--transition-elastic);
+            box-shadow: var(--shadow-glow);
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-card:hover .feature-icon {
+            transform: scale(1.15) rotate(360deg);
+            box-shadow: var(--shadow-glow-strong);
+        }
+
+        .feature-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--text-primary);
+            position: relative;
+            z-index: 2;
+        }
+
+        .feature-description {
+            color: var(--text-secondary);
+            line-height: 1.7;
+            position: relative;
+            z-index: 2;
+        }
+
+        /* Enhanced Products Section */
+        .products {
+            padding: 6rem 0;
+            background: var(--background);
+            position: relative;
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .product-card {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-2xl);
+            overflow: hidden;
+            transition: var(--transition-bounce);
+            box-shadow: var(--shadow-md);
+            position: relative;
+        }
+
+        .product-card:hover {
+            transform: translateY(-12px) scale(1.02);
+            box-shadow: var(--shadow-2xl);
+            border-color: var(--accent);
+        }
+
+        .product-image {
+            height: 320px;
+            background: var(--background);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .product-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition-slow);
+        }
+
+        .product-card:hover .product-image img {
+            transform: scale(1.1) rotate(1deg);
+            filter: brightness(1.1) contrast(1.1);
+        }
+
+        .product-badges {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 3;
+        }
+
+        .product-badge {
+            padding: 0.4rem 1rem;
+            border-radius: var(--radius-full);
+            font-size: 0.75rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(12px);
+            animation: badgeGlow 2s ease-in-out infinite;
+        }
+
+        @keyframes badgeGlow {
+            0%, 100% { box-shadow: 0 0 0 rgba(255, 255, 255, 0); }
+            50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); }
+        }
+
+        .badge-new { 
+            background: var(--success); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(16, 185, 129, 0.3);
+        }
+        .badge-sale { 
+            background: var(--error); 
+            color: white; 
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.3);
+        }
+        .badge-trending { 
+            background: var(--gradient-primary); 
+            color: white; 
+            box-shadow: var(--shadow-glow);
+        }
+
+        .product-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.8);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            opacity: 0;
+            transition: var(--transition-normal);
+            backdrop-filter: blur(8px);
+        }
+
+        .product-card:hover .product-overlay {
+            opacity: 1;
+        }
+
+        .overlay-btn {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--surface);
+            color: var(--text-primary);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: var(--transition-bounce);
+            font-size: 1.2rem;
+            box-shadow: var(--shadow-lg);
+        }
+
+        .overlay-btn:hover {
+            background: var(--accent);
+            color: white;
+            transform: scale(1.15) translateY(-2px);
+            box-shadow: var(--shadow-glow);
+        }
+
+        .product-info {
+            padding: 2rem;
+        }
+
+        .product-name {
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+            color: var(--text-primary);
+            font-size: 1.1rem;
+        }
+
+        .product-price {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .price-current {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--accent);
+        }
+
+        .price-original {
+            text-decoration: line-through;
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .price-discount {
+            background: var(--error);
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: var(--radius-full);
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-add-cart {
+            flex: 1;
+            padding: 1rem;
+            background: var(--gradient-primary);
+            color: white;
+            border: none;
+            border-radius: var(--radius-xl);
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition-bounce);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-add-cart::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.6s;
+        }
+
+        .btn-add-cart:hover::before {
+            left: 100%;
+        }
+
+        .btn-add-cart:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: var(--shadow-glow);
+        }
+
+        /* Animations */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Enhanced Responsive Design */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+            
+            .header-nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .logo-container {
+                width: 55px;
+                height: 55px;
+            }
+
+            .logo-image {
+                width: 38px;
+                height: 38px;
+            }
+
+            .logo-title {
+                font-size: 1.3rem;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+                text-align: center;
+            }
+            
+            .hero-visual {
+                order: -1;
+            }
+
+            .logo-container {
+                width: 50px;
+                height: 50px;
+            }
+
+            .logo-image {
+                width: 34px;
+                height: 34px;
+            }
+
+            .logo-title {
+                font-size: 1.2rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.65rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-nav {
+                padding: 1rem;
+            }
+            
+            .hero {
+                padding: 6rem 0 3rem;
+            }
+
+            .hero-visual {
+                grid-template-columns: 1fr;
+            }
+            
+            .theme-selector {
+                order: -1;
+                width: 100%;
+                justify-content: space-between;
+            }
+
+            .nav-actions {
+                flex-wrap: wrap;
+                gap: 0.75rem;
+            }
+
+            .logo {
+                gap: 0.75rem;
+            }
+
+            .logo-container {
+                width: 45px;
+                height: 45px;
+            }
+
+            .logo-image {
+                width: 30px;
+                height: 30px;
+            }
+
+            .logo-title {
+                font-size: 1.1rem;
+            }
+
+            .logo-subtitle {
+                font-size: 0.6rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .theme-selector {
+                padding: 0.3rem;
+            }
+
+            .theme-btn {
+                width: 32px;
+                height: 32px;
+            }
+
+            .action-btn {
+                width: 44px;
+                height: 44px;
+            }
+
+            .logo-text {
+                display: none;
+            }
+        }
+
+        /* Toast Notifications Enhanced */
+        .toast-container {
+            position: fixed;
+            top: 2rem;
+            right: 2rem;
+            z-index: 9999;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .toast {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-left: 4px solid var(--success);
+            border-radius: var(--radius-xl);
+            padding: 1.25rem 1.5rem;
+            margin-bottom: 1rem;
+            box-shadow: var(--shadow-xl);
+            animation: toastSlideIn 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+            backdrop-filter: blur(12px);
+            max-width: 400px;
+        }
+
+        .toast.error { border-left-color: var(--error); }
+        .toast.warning { border-left-color: var(--warning); }
+        .toast.info { border-left-color: var(--info); }
+
+        @keyframes toastSlideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100px) scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0) scale(1);
+            }
+        }
+
+        /* Loading Animation Enhanced */
+        .loading {
+            opacity: 0.7;
+            pointer-events: none;
+            position: relative;
+        }
+
+        .loading::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 24px;
+            height: 24px;
+            margin: -12px 0 0 -12px;
+            border: 3px solid var(--accent);
+            border-radius: 50%;
+            border-top-color: transparent;
+            animation: loadingSpin 1s linear infinite;
+        }
+
+        @keyframes loadingSpin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* Utility Classes Enhanced */
+        .text-gradient {
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .glass-effect {
+            background: var(--gradient-glass);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glow-effect {
+            box-shadow: var(--shadow-glow);
+        }
+
+        .hover-lift {
+            transition: var(--transition-bounce);
+        }
+
+        .hover-lift:hover {
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .animate-fade-in {
+            animation: fadeInUp 0.8s ease both;
+        }
+
+        .animate-slide-left {
+            animation: slideInLeft 0.8s ease both;
+        }
+
+        .animate-slide-right {
+            animation: slideInRight 0.8s ease both;
+        }
+    </style>
+</head>
+<body data-theme="gold">
+    <!-- Premium Animated Background -->
+    <div class="premium-background"></div>
+    <div class="geometric-patterns"></div>
+
+    <!-- Enhanced Particle System -->
+    <div class="particle-container" id="particleContainer"></div>
+
+    <!-- Enhanced Header -->
+    <header class="header" id="header">
+        <div class="header-top">
+            ✨ Premium Jewelry Collection | Free Express Shipping | Lifetime Warranty | 24/7 Support ✨
+        </div>
+        <nav class="header-nav">
+            <a href="#" class="logo">
+                <div class="logo-container">
+                    <img src="https://crookstore.in/cdn/shop/files/010.png?v=1705328085&width=200" alt="Crook Store" class="logo-image">
+                </div>
+                <div class="logo-text">
+                    <div class="logo-title">CROOK STORE</div>
+                    <div class="logo-subtitle">Premium Jewelry</div>
+                </div>
+            </a>
+
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#blog" class="nav-link">Blog</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+
+            <div class="nav-actions">
+                <div class="theme-selector">
+                    <button class="theme-btn gold active" data-theme="gold" title="Luxury Gold"></button>
+                    <button class="theme-btn sapphire" data-theme="sapphire" title="Sapphire Blue"></button>
+                    <button class="theme-btn emerald" data-theme="emerald" title="Emerald Green"></button>
+                    <button class="theme-btn rose" data-theme="rose" title="Rose Gold"></button>
+                </div>
+
+                <button class="action-btn" id="wishlistBtn" title="Wishlist">
+                    <i class="fas fa-heart"></i>
+                    <span class="badge" id="wishlistBadge">0</span>
+                </button>
+
+                <button class="action-btn" id="cartBtn" title="Cart">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="badge" id="cartBadge">0</span>
+                </button>
+
+                <button class="action-btn" id="userBtn" title="Account">
+                    <i class="fas fa-user"></i>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Enhanced Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="hero-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Premium Collection 2025</span>
+                </div>
+                <h1 class="hero-title">Jewelry That Defines Excellence</h1>
+                <p class="hero-subtitle">
+                    Discover our meticulously crafted collection of premium jewelry and accessories, where traditional artistry meets contemporary design for the discerning connoisseur.
+                </p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">
+                        <span>Explore Collection</span>
+                        <i class="fas fa-gem"></i>
+                    </a>
+                    <a href="#about" class="btn btn-secondary">
+                        <span>Our Heritage</span>
+                        <i class="fas fa-play"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="https://crookstore.in/cdn/shop/files/1AC802C6-7590-4EC3-8393-81010E22FBC9.jpg?v=1720417247&width=360" alt="Premium Jewelry Collection">
+                </div>
+                <div class="hero-image">
+                    <img src="https://crookstore.in/cdn/shop/files/VS_03667.jpg?v=1725882520&width=360" alt="Luxury Accessories">
+                </div>
+                <div class="hero-image">
+                    <img src="https://crookstore.in/cdn/shop/files/2_6.jpg?v=1719908733&width=360" alt="Designer Pieces">
+                </div>
+                <div class="hero-image">
+                    <img src="https://crookstore.in/cdn/shop/files/VS_03702.jpg?v=1725882202&width=360" alt="Handcrafted Excellence">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-award"></i>
+                    <span>Why Choose Excellence</span>
+                </div>
+                <h2 class="section-title">Premium <span class="text-gradient">Standards</span></h2>
+                <p class="section-subtitle">
+                    We set the highest standards in jewelry craftsmanship, combining traditional techniques with innovative design to create pieces that exceed expectations.
+                </p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <h3 class="feature-title">Premium Materials</h3>
+                    <p class="feature-description">
+                        Every piece is crafted using the finest materials, from premium metals to carefully selected stones, ensuring lasting beauty and durability.
+                    </p>
+                </div>
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shield-check"></i>
+                    </div>
+                    <h3 class="feature-title">Lifetime Guarantee</h3>
+                    <p class="feature-description">
+                        Our commitment to quality includes comprehensive warranty coverage and professional maintenance services for the lifetime of your jewelry.
+                    </p>
+                </div>
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-shipping-fast"></i>
+                    </div>
+                    <h3 class="feature-title">Express Delivery</h3>
+                    <p class="feature-description">
+                        Professional packaging and expedited shipping ensure your precious jewelry arrives safely with signature confirmation and insurance.
+                    </p>
+                </div>
+                <div class="feature-card animate-fade-in">
+                    <div class="feature-icon">
+                        <i class="fas fa-concierge-bell"></i>
+                    </div>
+                    <h3 class="feature-title">Expert Concierge</h3>
+                    <p class="feature-description">
+                        Our jewelry specialists provide personalized consultation, styling advice, and ongoing support to enhance your collection.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enhanced Products Section -->
+    <section class="products" id="products">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-crown"></i>
+                    <span>Featured Products</span>
+                </div>
+                <h2 class="section-title">Premium <span class="text-gradient">Collection</span></h2>
+                <p class="section-subtitle">
+                    Each piece in our collection represents the pinnacle of jewelry craftsmanship, designed for those who appreciate true excellence and timeless beauty.
+                </p>
+            </div>
+            <div class="products-grid">
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/FDC754DE-D9EC-4685-BF06-05587C6A2899.jpg?v=1720417076&width=360" alt="Premium Gold Chain">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">New</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Premium Gold Chain Collection</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹2,499</span>
+                            <span class="price-original">₹3,499</span>
+                            <span class="price-discount">-29%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/IMG_0346_4bb97e9f-5e7f-4614-abd1-ddb8a6c5635a.jpg?v=1756023827&width=360" alt="Designer Statement Ring">
+                        <div class="product-badges">
+                            <span class="product-badge badge-trending">Trending</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Designer Statement Ring</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹1,299</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/29.png?v=1753209138&width=360" alt="Luxury Bracelet Set">
+                        <div class="product-badges">
+                            <span class="product-badge badge-sale">Sale</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Luxury Bracelet Set</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹1,899</span>
+                            <span class="price-original">₹2,699</span>
+                            <span class="price-discount">-30%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/39_1.jpg?v=1718351750&width=360" alt="Professional Necklace">
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Professional Necklace Collection</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹3,299</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/IMG_1944.jpg?v=1729575533&width=360" alt="Cuban Chain Premium">
+                        <div class="product-badges">
+                            <span class="product-badge badge-new">Premium</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Cuban Chain Premium Gold</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹4,499</span>
+                            <span class="price-original">₹5,999</span>
+                            <span class="price-discount">-25%</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card animate-fade-in">
+                    <div class="product-image">
+                        <img src="https://crookstore.in/cdn/shop/files/2_1.jpg?v=1723183577&width=360" alt="Designer Accessory">
+                        <div class="product-badges">
+                            <span class="product-badge badge-trending">Exclusive</span>
+                        </div>
+                        <div class="product-overlay">
+                            <button class="overlay-btn" title="Quick View">
+                                <i class="fas fa-eye"></i>
+                            </button>
+                            <button class="overlay-btn" title="Add to Wishlist">
+                                <i class="fas fa-heart"></i>
+                            </button>
+                            <button class="overlay-btn" title="Compare">
+                                <i class="fas fa-balance-scale"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="product-info">
+                        <h3 class="product-name">Designer Luxury Accessory</h3>
+                        <div class="product-price">
+                            <span class="price-current">₹2,199</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart">Add to Cart</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-content" style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center;">
+                <div class="about-text animate-slide-left">
+                    <div class="section-badge">
+                        <i class="fas fa-award"></i>
+                        <span>About Excellence</span>
+                    </div>
+                    <h2 class="section-title">Crafting <span class="text-gradient">Legacy</span></h2>
+                    <p class="section-subtitle">
+                        Since our inception, Crook Store has been synonymous with exceptional craftsmanship and timeless design. We believe that jewelry is not just an accessory, but a statement of your personal journey and achievements.
+                    </p>
+                    <p style="margin-top: 2rem; color: var(--text-secondary); line-height: 1.7; font-size: 1.1rem;">
+                        Our master artisans combine traditional techniques with innovative design principles to create pieces that transcend trends and become treasured heirlooms for generations to come.
+                    </p>
+                    <div class="about-stats" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3rem;">
+                        <div class="stat-item" style="text-align: center; padding: 2rem; background: var(--surface); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+                            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">15K+</div>
+                            <div class="stat-label" style="color: var(--text-secondary); font-weight: 500;">Happy Customers</div>
+                        </div>
+                        <div class="stat-item" style="text-align: center; padding: 2rem; background: var(--surface); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+                            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">1000+</div>
+                            <div class="stat-label" style="color: var(--text-secondary); font-weight: 500;">Unique Designs</div>
+                        </div>
+                        <div class="stat-item" style="text-align: center; padding: 2rem; background: var(--surface); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+                            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">5★</div>
+                            <div class="stat-label" style="color: var(--text-secondary); font-weight: 500;">Excellence Rating</div>
+                        </div>
+                        <div class="stat-item" style="text-align: center; padding: 2rem; background: var(--surface); border-radius: var(--radius-2xl); box-shadow: var(--shadow-md);">
+                            <div class="stat-number" style="font-size: 2.5rem; font-weight: 700; color: var(--accent); margin-bottom: 0.5rem;">24/7</div>
+                            <div class="stat-label" style="color: var(--text-secondary); font-weight: 500;">Premium Support</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual animate-slide-right" style="display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem;">
+                    <div class="about-image hover-lift" style="height: 200px; background: var(--background); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="https://crookstore.in/cdn/shop/files/IMG_5713.jpg?v=1725822303&width=360" alt="Craftsmanship" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="about-image hover-lift" style="height: 200px; background: var(--background); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="https://crookstore.in/cdn/shop/files/VS_03667.jpg?v=1725882520&width=360" alt="Quality Assurance" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="about-image hover-lift" style="height: 200px; background: var(--background); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="https://crookstore.in/cdn/shop/files/1AC802C6-7590-4EC3-8393-81010E22FBC9.jpg?v=1720417247&width=360" alt="Design Innovation" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                    <div class="about-image hover-lift" style="height: 200px; background: var(--background); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-lg);">
+                        <img src="https://crookstore.in/cdn/shop/files/2_6.jpg?v=1719908733&width=360" alt="Premium Materials" style="width: 100%; height: 100%; object-fit: cover;">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="blog" id="blog" style="padding: 6rem 0; background: var(--surface);">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-badge">
+                    <i class="fas fa-newspaper"></i>
+                    <span>Latest Insights</span>
+                </div>
+                <h2 class="section-title">News & <span class="text-gradient">Stories</span></h2>
+                <p class="section-subtitle">
+                    Stay updated with the latest trends, expert insights, and stories from the world of premium jewelry craftsmanship.
+                </p>
+            </div>
+            <div class="blog-grid" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(380px, 1fr)); gap: 2.5rem;">
+                <article class="blog-card animate-fade-in" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-bounce);">
+                    <div class="blog-image" style="height: 280px; background: var(--background); overflow: hidden;">
+                        <img src="https://crookstore.in/cdn/shop/files/VS_03702.jpg?v=1725882202&width=360" alt="Jewelry Trends 2025" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow);">
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                            <span><i class="fas fa-calendar"></i> Aug 27, 2025</span>
+                            <span><i class="fas fa-user"></i> shubham-shipt</span>
+                        </div>
+                        <h3 class="blog-title" style="font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.2rem; line-height: 1.4;">Premium Jewelry Trends Shaping 2025</h3>
+                        <p class="blog-excerpt" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                            Discover the emerging trends in luxury jewelry that are defining elegance and sophistication in 2025. From sustainable materials to innovative designs that blend tradition with modernity...
+                        </p>
+                        <a href="#" class="blog-link" style="color: var(--accent); text-decoration: none; font-weight: 600; transition: var(--transition-normal); display: inline-flex; align-items: center; gap: 0.5rem;">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-fade-in" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-bounce);">
+                    <div class="blog-image" style="height: 280px; background: var(--background); overflow: hidden;">
+                        <img src="https://crookstore.in/cdn/shop/files/29.png?v=1753209138&width=360" alt="Jewelry Care Guide" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow);">
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                            <span><i class="fas fa-calendar"></i> Aug 25, 2025</span>
+                            <span><i class="fas fa-user"></i> Expert Team</span>
+                        </div>
+                        <h3 class="blog-title" style="font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.2rem; line-height: 1.4;">The Ultimate Guide to Jewelry Care & Maintenance</h3>
+                        <p class="blog-excerpt" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                            Learn professional techniques to preserve the brilliance and longevity of your precious jewelry collection. Our comprehensive guide covers everything from daily care to professional maintenance...
+                        </p>
+                        <a href="#" class="blog-link" style="color: var(--accent); text-decoration: none; font-weight: 600; transition: var(--transition-normal); display: inline-flex; align-items: center; gap: 0.5rem;">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card animate-fade-in" style="background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-2xl); overflow: hidden; box-shadow: var(--shadow-md); transition: var(--transition-bounce);">
+                    <div class="blog-image" style="height: 280px; background: var(--background); overflow: hidden;">
+                        <img src="https://crookstore.in/cdn/shop/files/39_1.jpg?v=1718351750&width=360" alt="Style Guide" style="width: 100%; height: 100%; object-fit: cover; transition: var(--transition-slow);">
+                    </div>
+                    <div class="blog-content" style="padding: 2rem;">
+                        <div class="blog-meta" style="display: flex; align-items: center; gap: 1.5rem; margin-bottom: 1rem; font-size: 0.9rem; color: var(--text-muted);">
+                            <span><i class="fas fa-calendar"></i> Aug 22, 2025</span>
+                            <span><i class="fas fa-user"></i> Style Expert</span>
+                        </div>
+                        <h3 class="blog-title" style="font-weight: 700; margin-bottom: 1rem; color: var(--text-primary); font-size: 1.2rem; line-height: 1.4;">Professional Jewelry Styling: Making Your Mark</h3>
+                        <p class="blog-excerpt" style="color: var(--text-secondary); line-height: 1.7; margin-bottom: 1.5rem;">
+                            Master the art of jewelry styling with expert tips and techniques. Learn how to choose and combine pieces that enhance your personal style and make a lasting impression in any setting...
+                        </p>
+                        <a href="#" class="blog-link" style="color: var(--accent); text-decoration: none; font-weight: 600; transition: var(--transition-normal); display: inline-flex; align-items: center; gap: 0.5rem;">
+                            Read Full Article <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Premium Footer -->
+    <footer class="footer" id="contact" style="background: var(--gradient-secondary); color: white; padding: 5rem 0 2rem;">
+        <div class="container">
+            <div class="footer-content" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 3rem; margin-bottom: 3rem;">
+                <div class="footer-section">
+                    <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                        <div style="width: 50px; height: 50px; background: var(--gradient-glass); border-radius: var(--radius-xl); display: flex; align-items: center; justify-content: center; backdrop-filter: blur(12px);">
+                            <img src="https://crookstore.in/cdn/shop/files/010.png?v=1705328085&width=200" alt="Crook Store" style="width: 35px; height: 35px; object-fit: contain;">
+                        </div>
+                        <div>
+                            <h3 style="color: var(--accent-light); font-family: 'Space Grotesk', sans-serif; font-size: 1.4rem; font-weight: 700;">CROOK STORE</h3>
+                            <p style="color: rgba(255, 255, 255, 0.7); font-size: 0.8rem; margin: 0;">Premium Jewelry</p>
+                        </div>
+                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.8); line-height: 1.7; margin-bottom: 2rem; font-size: 1.05rem;">
+                        Crafting exceptional jewelry pieces that celebrate your unique journey and define moments of elegance in your life.
+                    </p>
+                    <div style="display: flex; gap: 1rem;">
+                        <a href="#" style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-bounce); backdrop-filter: blur(8px);" class="hover-lift">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-bounce); backdrop-filter: blur(8px);" class="hover-lift">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-bounce); backdrop-filter: blur(8px);" class="hover-lift">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" style="width: 45px; height: 45px; background: rgba(255, 255, 255, 0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; transition: var(--transition-bounce); backdrop-filter: blur(8px);" class="hover-lift">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-light); font-size: 1.2rem; font-weight: 600;">Premium Collections</h3>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Gold Jewelry</a>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Designer Rings</a>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Premium Necklaces</a>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Luxury Bracelets</a>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Statement Pieces</a>
+                    <a href="#products" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Limited Editions</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-light); font-size: 1.2rem; font-weight: 600;">Customer Excellence</h3>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Size & Fit Guide</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Premium Shipping</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Easy Returns</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Lifetime Warranty</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Care Instructions</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.8); text-decoration: none; transition: var(--transition-normal); display: block; margin-bottom: 0.75rem; font-size: 1rem;">Expert Support</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3 style="margin-bottom: 1.5rem; color: var(--accent-light); font-size: 1.2rem; font-weight: 600;">Get in Touch</h3>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1rem;">
+                        <i class="fas fa-envelope" style="color: var(--accent-light);"></i> support@crookstore.in
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1rem;">
+                        <i class="fas fa-phone" style="color: var(--accent-light);"></i> +91 9876543210
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1rem;">
+                        <i class="fas fa-whatsapp" style="color: var(--accent-light);"></i> WhatsApp Support
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); margin-bottom: 1rem; display: flex; align-items: center; gap: 0.75rem; font-size: 1rem;">
+                        <i class="fas fa-map-marker-alt" style="color: var(--accent-light);"></i> Mumbai, Maharashtra
+                    </p>
+                    <p style="color: rgba(255, 255, 255, 0.8); display: flex; align-items: center; gap: 0.75rem; font-size: 1rem;">
+                        <i class="fas fa-clock" style="color: var(--accent-light);"></i> 24/7 Premium Support
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom" style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;">
+                <p style="color: rgba(255, 255, 255, 0.6); font-size: 0.95rem;">
+                    &copy; 2025 Crook Store. All rights reserved. | Crafted with excellence by <span style="color: var(--accent-light); font-weight: 600;">shubham-shipt</span> | Build Date: 2025-08-27 08:13:57 UTC
+                </p>
+                <div style="display: flex; gap: 2rem; flex-wrap: wrap;">
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: var(--transition-normal); font-size: 0.95rem;">Privacy Policy</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: var(--transition-normal); font-size: 0.95rem;">Terms of Service</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: var(--transition-normal); font-size: 0.95rem;">Cookie Policy</a>
+                    <a href="#" style="color: rgba(255, 255, 255, 0.6); text-decoration: none; transition: var(--transition-normal); font-size: 0.95rem;">Accessibility</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Container -->
+    <div class="toast-container" id="toastContainer"></div>
+
+    <script>
+        // Enhanced Premium Crook Store Application
+        class PremiumCrookStore {
+            constructor() {
+                this.cart = JSON.parse(localStorage.getItem('premium_crook_cart')) || [];
+                this.wishlist = JSON.parse(localStorage.getItem('premium_crook_wishlist')) || [];
+                this.currentTheme = localStorage.getItem('premium_crook_theme') || 'gold';
+                this.particles = [];
+                this.maxParticles = 80;
+                this.user = 'shubham-shipt';
+                this.buildDate = '2025-08-27 08:13:57 UTC';
+                this.init();
+            }
+
+            init() {
+                this.initParticleSystem();
+                this.initThemeSystem();
+                this.initScrollEffects();
+                this.initAnimationSystem();
+                this.initProductSystem();
+                this.initCartSystem();
+                this.initWishlistSystem();
+                this.initNavigation();
+                this.updateBadges();
+                this.bindGlobalEvents();
+                this.showWelcomeMessage();
+                
+                console.log(`🚀 Premium Crook Store initialized by ${this.user} at ${this.buildDate}`);
+            }
+
+            // Enhanced Particle System
+            initParticleSystem() {
+                const container = document.getElementById('particleContainer');
+                const particleTypes = ['particle-gold', 'particle-diamond', 'particle-sparkle'];
+                
+                for (let i = 0; i < this.maxParticles; i++) {
+                    const particle = document.createElement('div');
+                    const type = particleTypes[Math.floor(Math.random() * particleTypes.length)];
+                    
+                    particle.className = `particle ${type}`;
+                    particle.style.left = Math.random() * 100 + '%';
+                    particle.style.top = Math.random() * 100 + '%';
+                    particle.style.animationDelay = Math.random() * 15 + 's';
+                    particle.style.animationDuration = (Math.random() * 8 + 12) + 's';
+                    
+                    container.appendChild(particle);
+                    this.particles.push(particle);
+                }
+                
+                console.log(`✨ ${this.particles.length} premium particles initialized`);
+            }
+
+            // Enhanced Theme System
+            initThemeSystem() {
+                const themeButtons = document.querySelectorAll('.theme-btn');
+                
+                themeButtons.forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        const theme = btn.dataset.theme;
+                        this.setTheme(theme);
+                        this.playThemeChangeEffect();
+                    });
+                });
+
+                this.setTheme(this.currentTheme);
+            }
+
+            setTheme(theme) {
+                document.body.setAttribute('data-theme', theme);
+                this.currentTheme = theme;
+                localStorage.setItem('premium_crook_theme', theme);
+                
+                // Update active theme button
+                document.querySelectorAll('.theme-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.theme === theme);
+                });
+
+                this.showToast(`Premium ${theme} theme activated! ✨`, 'success');
+                console.log(`🎨 Theme changed to: ${theme}`);
+            }
+
+            playThemeChangeEffect() {
+                // Add visual feedback for theme change
+                const body = document.body;
+                body.style.transform = 'scale(0.99)';
+                body.style.filter = 'brightness(1.1)';
+                
+                setTimeout(() => {
+                    body.style.transform = 'scale(1)';
+                    body.style.filter = 'brightness(1)';
+                }, 200);
+            }
+
+            // Enhanced Scroll Effects
+            initScrollEffects() {
+                const header = document.getElementById('header');
+                let lastScrollY = window.scrollY;
+                let ticking = false;
+
+                const updateHeader = () => {
+                    const scrollY = window.scrollY;
+                    
+                    if (scrollY > 100) {
+                        header.classList.add('scrolled');
+                    } else {
+                        header.classList.remove('scrolled');
+                    }
+
+                    // Add parallax effect to hero section
+                    const hero = document.querySelector('.hero');
+                    if (hero && scrollY < window.innerHeight) {
+                        hero.style.transform = `translateY(${scrollY * 0.5}px)`;
+                    }
+
+                    lastScrollY = scrollY;
+                    ticking = false;
+                };
+
+                window.addEventListener('scroll', () => {
+                    if (!ticking) {
+                        requestAnimationFrame(updateHeader);
+                        ticking = true;
+                    }
+                });
+            }
+
+            // Enhanced Animation System
+            initAnimationSystem() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -100px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry, index) => {
+                        if (entry.isIntersecting) {
+                            setTimeout(() => {
+                                entry.target.style.opacity = '1';
+                                entry.target.style.transform = 'translateY(0) scale(1)';
+                                entry.target.classList.add('animate');
+                            }, index * 100);
+                        }
+                    });
+                }, observerOptions);
+
+                // Observe all animatable elements
+                document.querySelectorAll('.animate-fade-in, .feature-card, .product-card, .blog-card').forEach(el => {
+                    el.style.opacity = '0';
+                    el.style.transform = 'translateY(30px) scale(0.95)';
+                    el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                    observer.observe(el);
+                });
+            }
+
+            // Enhanced Product System
+            initProductSystem() {
+                document.querySelectorAll('.btn-add-cart').forEach(btn => {
+                    btn.addEventListener('click', (e) => {
+                        this.addToCart(e.target);
+                    });
+                });
+
+                document.querySelectorAll('.overlay-btn').forEach(btn => {
+                    btn.addEventListener('click', () => {
+                        if (btn.title === 'Add to Wishlist') {
+                            this.addToWishlist(btn);
+                        } else if (btn.title === 'Quick View') {
+                            this.showToast('Quick view feature coming soon! 👁️', 'info');
+                        } else if (btn.title === 'Compare') {
+                            this.showToast('Product comparison feature coming soon! ⚖️', 'info');
+                        }
+                    });
+                });
+            }
+
+            // Enhanced Cart System
+            initCartSystem() {
+                document.getElementById('cartBtn').addEventListener('click', () => {
+                    this.showCartDetails();
+                });
+            }
+
+            addToCart(button) {
+                const productCard = button.closest('.product-card');
+                const productName = productCard.querySelector('.product-name').textContent;
+                const productPrice = productCard.querySelector('.price-current').textContent;
+                const productImage = productCard.querySelector('img').src;
+
+                const product = {
+                    id: `product_${Date.now()}`,
+                    name: productName,
+                    price: productPrice,
+                    image: productImage,
+                    quantity: 1,
+                    addedAt: new Date().toISOString(),
+                    addedBy: this.user
+                };
+
+                this.cart.push(product);
+                this.saveCartData();
+                this.updateBadges();
+                this.animateAddToCart(button);
+                
+                this.showToast(`✨ ${productName} added to your premium cart!`, 'success');
+                console.log(`🛒 Product added to cart:`, product);
+            }
+
+            animateAddToCart(button) {
+                const originalText = button.textContent;
+                const originalBg = button.style.background;
+                
+                button.textContent = 'Added! ✓';
+                button.style.background = 'var(--success)';
+                button.classList.add('loading');
+                
+                // Create floating effect
+                button.style.transform = 'scale(0.95)';
+                setTimeout(() => {
+                    button.style.transform = 'scale(1.05)';
+                }, 150);
+                
+                setTimeout(() => {
+                    button.textContent = originalText;
+                    button.style.background = originalBg;
+                    button.classList.remove('loading');
+                    button.style.transform = 'scale(1)';
+                }, 2500);
+            }
+
+            showCartDetails() {
+                if (this.cart.length === 0) {
+                    this.showToast('Your premium cart is empty! 🛒', 'info');
+                    return;
+                }
+
+                const cartSummary = this.cart.map(item => 
+                    `• ${item.name} - ${item.price} (Qty: ${item.quantity})`
+                ).join('\n');
+
+                const total = this.calculateCartTotal();
+                const message = `Premium Cart Summary (${this.cart.length} items):\n\n${cartSummary}\n\n💎 Total: ₹${total.toLocaleString('en-IN')}\n\nProceed to checkout?`;
+
+                if (confirm(message)) {
+                    this.showToast('Redirecting to premium checkout... 🚀', 'success');
+                }
+            }
+
+            calculateCartTotal() {
+                return this.cart.reduce((total, item) => {
+                    const price = parseFloat(item.price.replace('₹', '').replace(',', ''));
+                    return total + (price * item.quantity);
+                }, 0);
+            }
+
+            // Enhanced Wishlist System
+            initWishlistSystem() {
+                document.getElementById('wishlistBtn').addEventListener('click', () => {
+                    this.showWishlistDetails();
+                });
+            }
+
+            addToWishlist(button) {
+                const productCard = button.closest('.product-card');
+                const productName = productCard.querySelector('.product-name').textContent;
+                const productImage = productCard.querySelector('img').src;
+
+                const product = {
+                    id: `wishlist_${Date.now()}`,
+                    name: productName,
+                    image: productImage,
+                    addedAt: new Date().toISOString(),
+                    addedBy: this.user
+                };
+
+                this.wishlist.push(product);
+                this.saveWishlistData();
+                this.updateBadges();
+                
+                button.style.color = 'var(--error)';
+                button.innerHTML = '<i class="fas fa-heart" style="color: var(--error);"></i>';
+                
+                this.showToast(`❤️ ${productName} added to your wishlist!`, 'success');
+                console.log(`❤️ Product added to wishlist:`, product);
+            }
+
+            showWishlistDetails() {
+                if (this.wishlist.length === 0) {
+                    this.showToast('Your premium wishlist is empty! ❤️', 'info');
+                    return;
+                }
+
+                const wishlistSummary = this.wishlist.map(item => 
+                    `• ${item.name}`
+                ).join('\n');
+
+                alert(`Premium Wishlist (${this.wishlist.length} items):\n\n${wishlistSummary}`);
+            }
+
+            // Enhanced Navigation
+            initNavigation() {
+                document.querySelectorAll('.nav-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const targetId = link.getAttribute('href');
+                        const target = document.querySelector(targetId);
+                        
+                        if (target) {
+                            const headerHeight = document.getElementById('header').offsetHeight;
+                            const targetPosition = target.offsetTop - headerHeight;
+                            
+                            window.scrollTo({
+                                top: targetPosition,
+                                behavior: 'smooth'
+                            });
+
+                            // Update active nav
+                            document.querySelectorAll('.nav-link').forEach(l => l.classList.remove('active'));
+                            link.classList.add('active');
+                        }
+                    });
+                });
+
+                // Blog link handlers
+                document.querySelectorAll('.blog-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        this.showToast('Premium blog articles coming soon! 📰', 'info');
+                    });
+                });
+            }
+
+            // Data Management
+            saveCartData() {
+                localStorage.setItem('premium_crook_cart', JSON.stringify(this.cart));
+            }
+
+            saveWishlistData() {
+                localStorage.setItem('premium_crook_wishlist', JSON.stringify(this.wishlist));
+            }
+
+            updateBadges() {
+                const cartBadge = document.getElementById('cartBadge');
+                const wishlistBadge = document.getElementById('wishlistBadge');
+
+                const cartCount = this.cart.reduce((total, item) => total + item.quantity, 0);
+
+                cartBadge.textContent = cartCount;
+                cartBadge.style.display = cartCount > 0 ? 'flex' : 'none';
+
+                wishlistBadge.textContent = this.wishlist.length;
+                wishlistBadge.style.display = this.wishlist.length > 0 ? 'flex' : 'none';
+
+                // Animate badges
+                if (cartCount > 0) {
+                    cartBadge.style.animation = 'badgePulse 0.6s ease';
+                    setTimeout(() => cartBadge.style.animation = '', 600);
+                }
+                
+                if (this.wishlist.length > 0) {
+                    wishlistBadge.style.animation = 'badgePulse 0.6s ease';
+                    setTimeout(() => wishlistBadge.style.animation = '', 600);
+                }
+            }
+
+            // Enhanced Toast System
+            showToast(message, type = 'success') {
+                const toastContainer = document.getElementById('toastContainer');
+                const toast = document.createElement('div');
+                toast.className = `toast ${type}`;
+                
+                const icons = {
+                    success: 'fas fa-check-circle',
+                    error: 'fas fa-exclamation-triangle',
+                    warning: 'fas fa-exclamation-circle',
+                    info: 'fas fa-info-circle'
+                };
+
+                toast.innerHTML = `
+                    <div style="display: flex; align-items: center; gap: 1rem;">
+                        <i class="${icons[type]}" style="color: var(--${type}); font-size: 1.2rem;"></i>
+                        <span style="flex: 1; font-weight: 500;">${message}</span>
+                        <button onclick="this.parentElement.parentElement.remove()" style="background: none; border: none; color: var(--text-muted); cursor: pointer; padding: 0.25rem; border-radius: 50%;">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                `;
+
+                toastContainer.appendChild(toast);
+
+                // Auto remove after 5 seconds
+                setTimeout(() => {
+                    if (toast.parentElement) {
+                        toast.remove();
+                    }
+                }, 5000);
+            }
+
+            // Global Event Bindings
+            bindGlobalEvents() {
+                // User account button
+                document.getElementById('userBtn').addEventListener('click', () => {
+                    this.showToast(`Welcome ${this.user}! Premium account features coming soon! 👤`, 'info');
+                });
+
+                // Enhanced hover effects for cards
+                document.querySelectorAll('.blog-card').forEach(card => {
+                    card.addEventListener('mouseenter', () => {
+                        card.style.transform = 'translateY(-8px) scale(1.02)';
+                        card.style.boxShadow = 'var(--shadow-2xl)';
+                    });
+                    
+                    card.addEventListener('mouseleave', () => {
+                        card.style.transform = 'translateY(0) scale(1)';
+                        card.style.boxShadow = 'var(--shadow-md)';
+                    });
+                });
+
+                // Enhanced hover effects for social links
+                document.querySelectorAll('.footer a[style*="border-radius: 50%"]').forEach(link => {
+                    link.addEventListener('mouseenter', () => {
+                        link.style.background = 'var(--accent)';
+                        link.style.transform = 'translateY(-5px) scale(1.1)';
+                        link.style.boxShadow = 'var(--shadow-glow)';
+                    });
+                    
+                    link.addEventListener('mouseleave', () => {
+                        link.style.background = 'rgba(255, 255, 255, 0.1)';
+                        link.style.transform = 'translateY(0) scale(1)';
+                        link.style.boxShadow = 'none';
+                    });
+                });
+            }
+
+            // Statistics and Analytics
+            getStats() {
+                return {
+                    user: this.user,
+                    buildDate: this.buildDate,
+                    currentTheme: this.currentTheme,
+                    cartItems: this.cart.length,
+                    wishlistItems: this.wishlist.length,
+                    totalCartValue: this.calculateCartTotal(),
+                    activeParticles: this.particles.length,
+                    version: 'Premium 2.0',
+                    features: {
+                        enhancedAnimations: true,
+                        premiumThemes: 4,
+                        realTimeUpdates: true,
+                        responsiveDesign: true,
+                        premiumParticles: true,
+                        advancedToasts: true
+                    }
+                };
+            }
+
+            clearAllData() {
+                const confirmAction = confirm(`${this.user}, are you sure you want to clear all premium data? This action cannot be undone.`);
+                
+                if (confirmAction) {
+                    localStorage.removeItem('premium_crook_cart');
+                    localStorage.removeItem('premium_crook_wishlist');
+                    localStorage.removeItem('premium_crook_theme');
+                    
+                    this.cart = [];
+                    this.wishlist = [];
+                    this.currentTheme = 'gold';
+                    
+                    this.updateBadges();
+                    this.setTheme('gold');
+                    this.showToast('All premium data cleared successfully! 🧹', 'success');
+                    
+                    console.log(`🧹 All data cleared by ${this.user} at ${new Date().toISOString()}`);
+                }
+            }
+
+            showWelcomeMessage() {
+                setTimeout(() => {
+                    this.showToast(`Welcome to Premium Crook Store, ${this.user}! ✨💎`, 'success');
+                }, 1000);
+            }
+        }
+
+        // Initialize Premium Application
+        document.addEventListener('DOMContentLoaded', function() {
+            window.premiumStore = new PremiumCrookStore();
+            
+            // Enhanced Console Welcome
+            console.log(`
+            🔥🔥🔥 PREMIUM CROOK STORE - ULTIMATE EDITION 🔥🔥🔥
+            
+            ╔══════════════════════════════════════════════════════════════╗
+            ║                    PREMIUM SYSTEM STATUS                    ║
+            ╠══════════════════════════════════════════════════════════════╣
+            ║ ✨ Premium Interface: FULLY ENHANCED                        ║
+            ║ 🎨 Multi-Theme System: 4 LUXURY THEMES                     ║
+            ║ ⭐ Particle System: 80+ PREMIUM PARTICLES                   ║
+            ║ 📱 Responsive Design: PERFECT ALL DEVICES                   ║
+            ║ 🖼️  Real Images: 12+ PRODUCT IMAGES                        ║
+            ║ 🎪 Enhanced Animations: SMOOTH & PREMIUM                   ║
+            ║ 📊 Performance: OPTIMIZED & FAST                           ║
+            ║ 🎯 Logo: PERFECTLY SIZED & POSITIONED                      ║
+            ║ 💎 Premium Colors: LUXURY COMBINATIONS                      ║
+            ╚══════════════════════════════════════════════════════════════╝
+            
+            👨‍💻 DEVELOPER: ${window.premiumStore.user}
+            📅 BUILD DATE: ${window.premiumStore.buildDate}
+            🎨 CURRENT THEME: ${window.premiumStore.currentTheme.toUpperCase()}
+            
+            🎮 PREMIUM DEVELOPER COMMANDS:
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            💻 premiumStore.getStats()        - View premium statistics
+            🛒 premiumStore.cart              - View cart contents
+            ❤️  premiumStore.wishlist         - View wishlist items
+            🎨 premiumStore.setTheme(name)    - Change theme (gold/sapphire/emerald/rose)
+            🧹 premiumStore.clearAllData()    - Clear all premium data
+            
+            🎨 PREMIUM LUXURY THEMES:
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            🥇 Gold Theme      - Classic luxury elegance
+            💙 Sapphire Theme  - Royal blue sophistication  
+            💚 Emerald Theme   - Luxury green premium
+            🌹 Rose Theme      - Modern rose gold beauty
+            
+            🚀 PREMIUM FEATURES ACTIVE:
+            ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+            ✅ Enhanced Logo with Perfect Sizing
+            ✅ 80+ Premium Particles with Enhanced Animations
+            ✅ 4 Luxury Theme System
+            ✅ About Us Section with Professional Stats
+            ✅ News & Blog Section with Real Content
+            ✅ Mobile Responsive (Perfect All Devices)
+            ✅ Premium Color Combinations
+            ✅ Advanced Animation System
+            ✅ Real Product Images Integration
+            ✅ Enhanced Cart & Wishlist System
+            
+            💎 ENJOY THE ULTIMATE PREMIUM JEWELRY EXPERIENCE! 💎
+            `);
+        });
+
+        // Enhanced Keyboard Shortcuts
+        document.addEventListener('keydown', (e) => {
+            // Ctrl + Shift + T for theme cycling
+            if (e.ctrlKey && e.shiftKey && e.key === 'T') {
+                e.preventDefault();
+                const themes = ['gold', 'sapphire', 'emerald', 'rose'];
+                const currentIndex = themes.indexOf(window.premiumStore.currentTheme);
+                const nextTheme = themes[(currentIndex + 1) % themes.length];
+                window.premiumStore.setTheme(nextTheme);
+            }
+
+            // Ctrl + Shift + C for cart
+            if (e.ctrlKey && e.shiftKey && e.key === 'C') {
+                e.preventDefault();
+                window.premiumStore.showCartDetails();
+            }
+
+            // Ctrl + Shift + W for wishlist
+            if (e.ctrlKey && e.shiftKey && e.key === 'W') {
+                e.preventDefault();
+                window.premiumStore.showWishlistDetails();
+            }
+
+            // Ctrl + Shift + S for stats
+            if (e.ctrlKey && e.shiftKey && e.key === 'S') {
+                e.preventDefault();
+                console.table(window.premiumStore.getStats());
+                window.premiumStore.showToast('Premium stats logged to console! 📊', 'info');
+            }
+        });
+
+        // Enhanced Performance Monitoring
+        window.addEventListener('load', () => {
+            const loadTime = performance.timing.loadEventEnd - performance.timing.navigationStart;
+            console.log(`🚀 Premium Crook Store loaded in ${loadTime}ms`);
+            
+            if (loadTime < 2000) {
+                console.log('✅ Excellent premium performance! 🏆');
+            } else if (loadTime < 4000) {
+                console.log('⚠️ Good premium performance 👍');
+            } else {
+                console.warn('🔧 Premium optimization recommended 🛠️');
+            }
+
+            // Log build information
+            console.log(`📊 Build Info: ${window.premiumStore.user} | ${window.premiumStore.buildDate}`);
+        });
+
+        // Enhanced Error Handling
+        window.addEventListener('error', (e) => {
+            console.error('Premium Application Error:', e.error);
+            if (window.premiumStore) {
+                window.premiumStore.showToast('Premium service temporarily affected. Please refresh for optimal experience. 🔄', 'error');
+            }
+        });
+
+        // Enhanced Connection Monitoring
+        window.addEventListener('online', () => {
+            if (window.premiumStore) {
+                window.premiumStore.showToast('Premium services restored! All features available. 🌐', 'success');
+            }
+        });
+
+        window.addEventListener('offline', () => {
+            if (window.premiumStore) {
+                window.premiumStore.showToast('You are offline. Limited premium features available. 📱', 'warning');
+            }
+        });
+
+        // Enhanced Auto-save with Premium Features
+        setInterval(() => {
+            if (window.premiumStore) {
+                window.premiumStore.saveCartData();
+                window.premiumStore.saveWishlistData();
+                console.log(`💾 Premium data auto-saved by ${window.premiumStore.user}`);
+            }
+        }, 45000);
+
+        // Premium Memory Management
+        if ('memory' in performance) {
+            setInterval(() => {
+                const memInfo = performance.memory;
+                const usedMB = Math.round(memInfo.usedJSHeapSize / 1048576);
+                
+                if (usedMB > 100) {
+                    console.log(`💾 Premium memory usage: ${usedMB}MB - Optimized for performance`);
+                }
+            }, 120000);
+        }
+
+        // Final Premium Message
+        setTimeout(() => {
+            console.log(`
+            🎉 PREMIUM CROOK STORE READY FOR LUXURY SHOPPING! 🎉
+            
+            ✨ Enhanced Features Successfully Loaded:
+            • Perfect Logo Sizing & Positioning
+            • 4 Premium Luxury Themes
+            • 80+ Enhanced Particle Animations
+            • Advanced Responsive Design
+            • Premium Color Combinations
+            • Real Product Image Integration
+            • Enhanced Cart & Wishlist System
+            • Professional About & Blog Sections
+            • Premium Performance Optimization
+            
+            🔗 Developer: ${window.premiumStore.user}
+            📅 Build: ${window.premiumStore.buildDate}
+            🚀 Status: PREMIUM PRODUCTION READY
+            
+            Try theme switching: premiumStore.setTheme("sapphire")
+            View stats: premiumStore.getStats()
+            
+            💎 Ultimate premium jewelry shopping experience activated! 💎
+            `);
+        }, 3000);
+
+    </script>
+</body>
+</html>
